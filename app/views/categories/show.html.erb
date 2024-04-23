@@ -1,6 +1,9 @@
 <!-- show.html.erb -->
 <div class="container">
+  <%= link_to "Back to All Categories", categories_path, class: "btn btn-secondary mb-3" %>
+
   <h1><%= @category.name %></h1>
+  <p><%= @category.description %></p>
   <ul>
     <% @category.articles.each do |article| %>
       <li><%= link_to article.title, article_path(article) %></li>
